@@ -4,9 +4,15 @@
   "description": "",
   "license": "ISC",
   "author": "Aung Pyae Phyo",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "model": "node model-test.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "openai": "^6.27.0",
+    "@azure/identity": "latest"
   }
 }

@@ -15,11 +15,11 @@ export async function main() {
 
   const response = await client.chat.completions.create({
     messages: [
-      { role:"system", content: "You are a helpful assistant." },
-      { role:"user", content: "I am going to Vietnam, Da Nang. What should I see?" }
+      { role:"system", content: "You are a helpful AI assistant." },
+      { role:"user", content: "I am going to Vietnam, Da Nang. What should I see? Just tell me 5 locations." }
     ],
-    max_completion_tokens: 13107,
-      temperature: 0.8,
+    max_completion_tokens: 12000,
+      temperature: 0.85,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
@@ -35,3 +35,5 @@ export async function main() {
 main().catch((err) => {
   console.error("The sample encountered an error:", err);
 });
+
+// Running the model works
